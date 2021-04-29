@@ -27,32 +27,35 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <div>CONSTANTS_NUMBER: {{CONSTANTS_NUMBER}}</div>
   </div>
 </template>
 
 <script>
+
+import { CONSTANTS_NUMBER } from './constants'
+import Api from '@/api';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      CONSTANTS_NUMBER: CONSTANTS_NUMBER,
+    }
+  },
+  mounted() {
+    this.$Service.get(Api.menu).then(data => {
+      console.log(data);
+    }).catch(err => {
+      console.log(err);
+    })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang='less' scoped>
+  @import url('./index.less');
 </style>

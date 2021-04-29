@@ -1,0 +1,1 @@
+export const CONSTANTS_NUMBER = 1;
