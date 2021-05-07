@@ -1,6 +1,6 @@
 import Vue from 'vue'
-{{ElementUI}}
-{{ElementUILess}}
+{{{ElementUI}}}
+{{{ElementUILess}}}
 
 import router from './router';
 import Service from './service';
