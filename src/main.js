@@ -1,13 +1,13 @@
 import Vue from 'vue'
-// {{ElementUI}}
-// {{ElementUILess}}
+{{ElementUI}}
+{{ElementUILess}}
 
 import router from './router';
 import Service from './service';
 import Filter from '@/util/filter';
 import App from './App.vue';
 
-// {{useElement}}
+{{useElement}}
 
 // 注册全局过滤器
 Object.keys(Filter).forEach((key) => {
