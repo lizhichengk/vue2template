@@ -1,8 +1,11 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
-
-
 module.exports = {
+  page: {
+    index: {
+      title: {{projectName}}
+    }
+  }
   devServer: {
     {{#if proxy}}
     proxy : {
