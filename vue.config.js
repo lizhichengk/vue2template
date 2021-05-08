@@ -1,8 +1,9 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  page: {
+  pages: {
     index: {
+      entry: 'src/main.js',
       title: '{{projectName}}'
     }
   },
