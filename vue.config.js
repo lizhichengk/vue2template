@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   devServer: {
-    {{#with proxy}}
+    {{#if proxy}}
     proxy : {
       '/{{name}}': {
         target: !isProduction ? '{{url}}' : '',
@@ -12,7 +12,7 @@ module.exports = {
         changeOrigin: true,
       },
     }
-    {{/with}}
+    {{/if}}
   },
   css: {
     loaderOptions: {
