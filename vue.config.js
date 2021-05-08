@@ -2,12 +2,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   devServer: {
-    proxy: {
-      '/swan': {
-        target: !isProduction ? 'https://lzc-docker.suanshubang.com' : '',
-        ws: true
-      }
-    }
+    proxy: '{{proxy}}'
   },
   css: {
     loaderOptions: {
