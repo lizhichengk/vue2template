@@ -11,7 +11,7 @@ import App from './App.vue';
 
 {{useElement}}
 {{useVuex}}
-{{store}}
+{{{store}}}
 
 // 注册全局过滤器
 Object.keys(Filter).forEach((key) => {
@@ -24,7 +24,7 @@ Vue.config.productionTip = false
 new Vue({
   router,
   {{#if Vuex}}
-  store
+  store,
   {{/if}}
   render: h => h(App),
 }).$mount('#app')
