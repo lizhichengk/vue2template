@@ -1,6 +1,6 @@
-import modules from 'modules';
-import actions from 'actions';
-import mutations from 'mutations';
+import modules from './modules.js';
+import actions from './actions.js';
+import mutations from './mutations.js';
 
 export default {
   state: {
