@@ -1,11 +1,20 @@
+/**
+ * vue.config基本配置
+ */
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
+  outputDir: process.env.outputDir,
+  publicPath: process.env.publicPath,
+  productionSourceMap: false,
+  parallel: isProduction ? true : false,
+  lintOnSave: true,
+  chainWebpack: (config) => {},
   pages: {
     index: {
-      entry: 'src/main.js',
+      entry: "./src/main.js",
       title: '{{projectName}}'
-    }
+    },
   },
   devServer: {
     {{#if proxy}}
@@ -17,6 +26,9 @@ module.exports = {
       },
     }
     {{/if}}
+  },
+  chainWebpack: (config) => {
+    config.plugins.delete('preload-index');
   },
   css: {
     loaderOptions: {
@@ -34,4 +46,4 @@ module.exports = {
       }
     }
   }
-}
+};

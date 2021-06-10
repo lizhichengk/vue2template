@@ -1,0 +1,8 @@
+.idea
+*.iml
+out
+gen
+.git
+*.md
+node_modules
+npm-debug.log
